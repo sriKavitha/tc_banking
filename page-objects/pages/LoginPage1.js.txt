@@ -1,0 +1,23 @@
+import { Selector, t } from 'testcafe'
+
+class LoginPage {
+    constructor() {
+        this.homePageSignInBtn = Selector("#signin_button")
+        this.loginUName = Selector("#user_login")
+        this.loginPwd = Selector("#user_password")
+        this.rememberMe = Selector("#user_remember_me")
+        this.signInBtn = Selector(".btn.btn-primary")
+        this.loginSuccessful = Selector("#account_summary_tab")
+    }
+    async login1(usr, pwd) {
+        //await t.setTestSpeed(.01)
+        await t.click(this.homePageSignInBtn)
+        //await t.debug
+        debugger
+        await t.typeText(this.loginUName, usr, { paste: true })
+        .typeText(this.loginPwd, pwd, { paste: true })
+        .click(this.signInBtn)
+    }
+    
+}
+export default LoginPage

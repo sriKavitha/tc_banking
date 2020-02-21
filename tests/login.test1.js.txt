@@ -1,0 +1,36 @@
+import LoginPage1 from '../page-objects/pages/LoginPage1';
+
+const loginPg1 = new LoginPage1()
+
+fixture('Login Tests')
+    .page("http://zero.webappsecurity.com/")
+    
+
+//Login using Invalid credentials...
+test("Login with Invalid Credentials", async t => {
+    debugger
+   loginPg1.login1("Invalid username", "invalid password")
+   //loginPg1.p1()
+    //await t
+    //    await t.setTestSpeed(.01)
+    //   await  t.click(loginPg.homePageSignInBtn)
+    //    await t.typeText(loginPg.loginUName, "as", { paste: true })
+    //     await t.typeText(loginPg.loginPwd, "assd", { paste: true })
+    //    await t.click(loginPg.signInBtn)
+    
+});
+
+//Login using Valid credentials....    
+test.skip("Login with Valid Credentials", async t => {
+   // loginPg.login("username", "password")
+    //await t.expect(loginPg.innerText).exists
+    await t
+       await t.setTestSpeed(.01)
+       await t.click(loginPg.homePageSignInBtn)
+       await t.typeText(loginPg.loginUName, "username", { paste: true })
+       await t.typeText(loginPg.loginPwd, "password", { paste: true })
+       await t.click(loginPg.signInBtn)
+    
+    
+});
+

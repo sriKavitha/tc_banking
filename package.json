@@ -1,0 +1,19 @@
+{
+  "name": "testcafe-banking",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "testcafe firefox ./tests"
+  },
+  "keywords": [
+    "TestCafe",
+    "testing",
+    "Automation"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "testcafe": "^1.8.1"
+  }
+}
